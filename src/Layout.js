@@ -7,7 +7,8 @@ export default function Layout() {
 	const currentPath = location.pathname;
 	return (
 		<div>
-			{currentPath !== "/register" ? <Navbar /> : null}
+			{/* {currentPath !== "/register" ? <Navbar /> : null} */}
+			<Navbar />
 			<div className="Layout-submain">
 				<Outlet />
 			</div>
