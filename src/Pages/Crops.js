@@ -84,6 +84,7 @@ const Crops = () => {
 			setFilteredCrops(crops);
 			setSearchError("");
 		}
+		nav("/crops/1");
 		setCurrentPage(1); // Reset to first page when searching
 	};
 

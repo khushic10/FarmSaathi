@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Box, Button, Typography, Paper } from "@mui/material";
 import CustomTextField from "../Components/CustomTextField";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Agriculture from "../Assets/agriculture.jpeg";
 import { useCookies } from "react-cookie";
 import useFormValidation from "../Hooks/useFormValidation";
@@ -11,6 +11,8 @@ const Login = () => {
 	const nav = useNavigate();
 	const [error, setError] = useState("");
 	const [loading, setLoading] = useState(false);
+	const location = useLocation();
+	const from = location.state?.from || "/";
 
 	const [eye, setEye] = useState(false);
 
@@ -26,7 +28,7 @@ const Login = () => {
 	const { formData, setErrors, errors, handleChange, validateForm } =
 		useFormValidation(initialFormState);
 
-	const [cookies, setCookie] = useCookies(["userToken", "userRole", "userId"]);
+	const [cookies, setCookie] = useCookies(["userToken"]);
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -74,10 +76,11 @@ const Login = () => {
 			// 	console.log("Fetch error:", error.message);
 			// }
 			setCookie("userToken", "sampletokenfdshfioj", {
+				secure: true,
+				sameSite: "Strict",
 				path: "/",
 			});
-			nav("/");
-			window.location.reload();
+			nav(from);
 			setLoading(false);
 		} else {
 			setErrors(validationErrors);
@@ -93,15 +96,18 @@ const Login = () => {
 				display: "flex",
 				justifyContent: "center",
 				alignItems: "flex-start",
-				minHeight: "85vh",
 				position: "relative",
-				overflow: "auto",
 			}}
 		>
 			<img
 				src={Agriculture}
 				alt=""
-				style={{ height: "100vh", width: "100%", objectFit: "cover" }}
+				style={{
+					height: "84.7vh",
+					width: "100%",
+					objectFit: "cover",
+					opacity: "90%",
+				}}
 			/>
 
 			<Paper

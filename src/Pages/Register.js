@@ -4,6 +4,7 @@ import { Box, Button, Typography, Paper } from "@mui/material";
 import CustomTextField from "../Components/CustomTextField";
 import { useNavigate } from "react-router-dom";
 import useFormValidation from "../Hooks/useFormValidation";
+import Agriculture from "../Assets/agriculture.jpeg";
 
 const Register = () => {
 	const nav = useNavigate();
@@ -86,13 +87,22 @@ const Register = () => {
 				alignItems: "flex-start",
 				minHeight: "85vh",
 				position: "relative",
-				overflow: "auto",
 			}}
 		>
+			<img
+				src={Agriculture}
+				alt=""
+				style={{
+					height: "88vh",
+					width: "100%",
+					objectFit: "cover",
+					opacity: "90%",
+				}}
+			/>
 			<Paper
 				elevation={3}
 				sx={{
-					margin: "3rem",
+					margin: "0.5rem",
 					padding: "2rem",
 					width: "100%",
 					maxWidth: "450px",

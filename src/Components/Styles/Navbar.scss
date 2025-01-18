@@ -20,6 +20,11 @@
 			li {
 				background-color: #cead25;
 				color: white;
+				cursor: default;
+				&:hover {
+					background-color: #cead25;
+					color: white;
+				}
 			}
 		}
 

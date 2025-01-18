@@ -11,8 +11,10 @@ export default function Navbar() {
 	const menuRef = useRef(null);
 	const [cookies, setCookie, removeCookie] = useCookies(["userToken"]);
 	const [token, setToken] = useState(cookies.userToken || "");
+	const page = 1;
 
 	useEffect(() => {
+		setToken(cookies.userToken || "");
 		const handler = (e) => {
 			if (!menuRef.current.contains(e.target)) {
 				setIsOpen(false);
@@ -22,7 +24,10 @@ export default function Navbar() {
 		return () => {
 			document.removeEventListener("mousedown", handler);
 		};
-	}, []);
+	}, [cookies]);
+	useEffect(() => {
+		setToken(cookies.userToken || "");
+	}, [cookies]);
 
 	const toggleDropdown = () => {
 		setIsOpen(!isOpen);
@@ -49,14 +54,11 @@ export default function Navbar() {
 				<NavLink to="/">
 					<li>Home</li>
 				</NavLink>
-				<NavLink to="/crops/1">
+				<NavLink to={`/crops/${page}`}>
 					<li>Crops Overview</li>
 				</NavLink>
-				<NavLink to="/crop/recommendation">
-					<li>Crop Recommendation</li>
-				</NavLink>
-				<NavLink to="/fertilizer/recommendation">
-					<li>Fertilizer Recommendation</li>
+				<NavLink to="/recommendation">
+					<li>Recommendation System</li>
 				</NavLink>
 			</ul>
 			<div className="navbar-login-main">
