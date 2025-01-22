@@ -1,0 +1,762 @@
+{
+	"crops": [
+		{
+			"name": "Rice",
+			"scientificName": "Oryza sativa",
+			"image_url": "https://images.unsplash.com/photo-1640145359012-1a6d168172ee?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			"crop_image": "https://images.pexels.com/photos/4187621/pexels-photo-4187621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"suitabilityScore": null,
+			"idealSowingTime": "June to July",
+			"climateRequirements": {
+				"temperature": "20-37°C",
+				"rainfall": "150-300 cm",
+				"humidity": "High"
+			},
+			"soilRequirements": {
+				"type": "Clayey or Loamy",
+				"pH": "5.0-6.5"
+			},
+			"wateringNeeds": "Requires standing water during early stages",
+			"estimatedYield": "4-6 tons per hectare",
+			"fertilizerRecommendations": "Nitrogen, Phosphorus, Potassium (NPK 60:30:30)",
+			"pestAndDiseaseManagement": {
+				"commonPests": ["Rice Stem Borer", "Leaf Folder"],
+				"diseases": ["Bacterial Leaf Blight", "Blast"],
+				"controlMeasures": [
+					"Use resistant varieties, apply pesticides like Chlorantraniliprole"
+				]
+			},
+			"marketInformation": {
+				"currentMarketValue": "₹20-25 per kg",
+				"demandAnalysis": "High demand in domestic and international markets"
+			},
+			"additionalInfo": {
+				"companionCrops": ["Sesbania", "Azolla"],
+				"cropRotationSuggestions": ["Wheat", "Maize"],
+				"environmentalBenefits": "Reduces carbon footprint by organic farming methods"
+			}
+		},
+		{
+			"name": "Maize",
+			"scientificName": "Zea mays",
+			"image_url": "https://images.pexels.com/photos/10041332/pexels-photo-10041332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"crop_image": "https://images.pexels.com/photos/209389/pexels-photo-209389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"suitabilityScore": null,
+			"idealSowingTime": "June to July or October to November",
+			"climateRequirements": {
+				"temperature": "21-27°C",
+				"rainfall": "50-75 cm",
+				"humidity": "Moderate"
+			},
+			"soilRequirements": {
+				"type": "Well-drained Loamy soil",
+				"pH": "5.5-7.0"
+			},
+			"wateringNeeds": "Moderate irrigation, avoid waterlogging",
+			"estimatedYield": "5-8 tons per hectare",
+			"fertilizerRecommendations": "NPK 120:60:40",
+			"pestAndDiseaseManagement": {
+				"commonPests": ["Stem Borer", "Fall Armyworm"],
+				"diseases": ["Downy Mildew", "Rust"],
+				"controlMeasures": [
+					"Crop rotation, use of insecticides like Lambda-cyhalothrin"
+				]
+			},
+			"marketInformation": {
+				"currentMarketValue": "₹15-20 per kg",
+				"demandAnalysis": "High demand for animal feed and industrial use"
+			},
+			"additionalInfo": {
+				"companionCrops": ["Cowpea", "Soybean"],
+				"cropRotationSuggestions": ["Wheat", "Legumes"],
+				"environmentalBenefits": "Improves soil structure when intercropped"
+			}
+		},
+		{
+			"name": "Chickpea",
+			"scientificName": "Cicer arietinum",
+			"image_url": "https://www.bhg.com/thmb/QQjxqIg3rvanNIXXwr8Y01Ac1u4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/grow-chickpeas-8655370-fea1e109fea143d1a09a862f0cbb17f1.jpg",
+			"crop_image": "https://plus.unsplash.com/premium_photo-1675237625827-38268aafc571?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			"suitabilityScore": null,
+			"idealSowingTime": "October to November",
+			"climateRequirements": {
+				"temperature": "21-27°C",
+				"rainfall": "60-90 cm",
+				"humidity": "Low to Moderate"
+			},
+			"soilRequirements": {
+				"type": "Loamy or Sandy soil",
+				"pH": "6.0-7.0"
+			},
+			"wateringNeeds": "Minimal, sensitive to waterlogging",
+			"estimatedYield": "2-3 tons per hectare",
+			"fertilizerRecommendations": "NPK 20:60:20",
+			"pestAndDiseaseManagement": {
+				"commonPests": ["Pod Borer"],
+				"diseases": ["Fusarium Wilt", "Ascochyta Blight"],
+				"controlMeasures": [
+					"Use disease-free seeds, apply Bacillus thuringiensis for pests"
+				]
+			},
+			"marketInformation": {
+				"currentMarketValue": "₹40-60 per kg",
+				"demandAnalysis": "High demand for pulses in domestic markets"
+			},
+			"additionalInfo": {
+				"companionCrops": ["Wheat"],
+				"cropRotationSuggestions": ["Cereal crops like Rice or Maize"],
+				"environmentalBenefits": "Improves soil fertility by nitrogen fixation"
+			}
+		},
+		{
+			"name": "Kidney Beans",
+			"scientificName": "Phaseolus vulgaris",
+			"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Snijboon_peulen_Phaseolus_vulgaris.jpg/800px-Snijboon_peulen_Phaseolus_vulgaris.jpg",
+			"crop_image": "https://images.pexels.com/photos/6316686/pexels-photo-6316686.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"suitabilityScore": null,
+			"idealSowingTime": "May to June",
+			"climateRequirements": {
+				"temperature": "15-21°C",
+				"rainfall": "60-100 cm",
+				"humidity": "Moderate"
+			},
+			"soilRequirements": {
+				"type": "Loamy soil with good drainage",
+				"pH": "6.0-7.5"
+			},
+			"wateringNeeds": "Adequate but avoid waterlogging",
+			"estimatedYield": "1-2 tons per hectare",
+			"fertilizerRecommendations": "NPK 30:60:30",
+			"pestAndDiseaseManagement": {
+				"commonPests": ["Aphids", "Cutworms"],
+				"diseases": ["Root Rot", "Bean Rust"],
+				"controlMeasures": ["Crop rotation, use of copper-based fungicides"]
+			},
+			"marketInformation": {
+				"currentMarketValue": "₹70-90 per kg",
+				"demandAnalysis": "High demand for protein-rich legumes"
+			},
+			"additionalInfo": {
+				"companionCrops": ["Corn", "Carrot"],
+				"cropRotationSuggestions": ["Cereals like Wheat"],
+				"environmentalBenefits": "Helps fix nitrogen in soil"
+			}
+		},
+		{
+			"name": "Pigeon Peas",
+			"scientificName": "Cajanus cajan",
+			"image_url": "https://www.bhg.com/thmb/TM7Fq_Xxp0z5N7makZ0gOHXHXMk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/How-to-Plant-and-Grow-Pigeon-Peas-1344250552-eafc49bf37f04a008836c1ae128ac921.jpg",
+			"crop_image": "https://www.perumarketplace.com/cmm/getImage.do?atchFileId=FILE_fa7c1e81-1be4-498b-8ebf-2be87c1ddc98&fileSn=2&thumb=600",
+			"suitabilityScore": null,
+			"idealSowingTime": "June to July",
+			"climateRequirements": {
+				"temperature": "26-30°C",
+				"rainfall": "60-120 cm",
+				"humidity": "Moderate"
+			},
+			"soilRequirements": {
+				"type": "Well-drained Loamy or Sandy soil",
+				"pH": "5.5-6.5"
+			},
+			"wateringNeeds": "Moderate, sensitive to excess water",
+			"estimatedYield": "1-2 tons per hectare",
+			"fertilizerRecommendations": "NPK 20:40:20",
+			"pestAndDiseaseManagement": {
+				"commonPests": ["Pod Borer", "Aphids"],
+				"diseases": ["Wilt", "Blight"],
+				"controlMeasures": [
+					"Use resistant varieties, apply neem oil-based insecticides"
+				]
+			},
+			"marketInformation": {
+				"currentMarketValue": "₹50-70 per kg",
+				"demandAnalysis": "Staple pulse crop with steady demand"
+			},
+			"additionalInfo": {
+				"companionCrops": ["Millets", "Cereals"],
+				"cropRotationSuggestions": ["Groundnut, Maize"],
+				"environmentalBenefits": "Improves soil fertility"
+			}
+		},
+		{
+			"name": "Moth Beans",
+			"scientificName": "Vigna aconitifolia",
+			"image_url": "https://static.salemmango.com/images/p/blog/desk/moth-bean---naripayaru-seeds-online---benefits--wZULcHfWEnr6EEu.jpg",
+			"crop_image": "https://5.imimg.com/data5/SELLER/Default/2020/9/WB/TK/QU/106270270/turkish-gram-moth-bean-1000x1000.jpg",
+			"suitabilityScore": null,
+			"idealSowingTime": "June to July",
+			"climateRequirements": {
+				"temperature": "25-30°C",
+				"rainfall": "30-40 cm",
+				"humidity": "Low to Moderate"
+			},
+			"soilRequirements": {
+				"type": "Sandy or Loamy soil",
+				"pH": "6.5-7.5"
+			},
+			"wateringNeeds": "Minimal, drought-tolerant",
+			"estimatedYield": "0.5-1 ton per hectare",
+			"fertilizerRecommendations": "NPK 20:40:20",
+			"pestAndDiseaseManagement": {
+				"commonPests": ["Aphids"],
+				"diseases": ["Root Rot"],
+				"controlMeasures": ["Use insecticides like Malathion"]
+			},
+			"marketInformation": {
+				"currentMarketValue": "₹50-80 per kg",
+				"demandAnalysis": "High demand in dry regions"
+			},
+			"additionalInfo": {
+				"companionCrops": ["Bajra"],
+				"cropRotationSuggestions": ["Maize"],
+				"environmentalBenefits": "Drought-tolerant and improves soil fertility"
+			}
+		},
+		{
+			"name": "Mungbean",
+			"scientificName": "Vigna radiata",
+			"image_url": "https://images.squarespace-cdn.com/content/v1/5eef82e7c6568557a6c5e1b8/1663095098803-RPEK8MJZPJ1P64PO697K/mung.jpg?format=1000w",
+			"crop_image": "https://images.pexels.com/photos/7420816/pexels-photo-7420816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"suitabilityScore": null,
+			"idealSowingTime": "July to August or February to March",
+			"climateRequirements": {
+				"temperature": "25-35°C",
+				"rainfall": "50-75 cm",
+				"humidity": "Moderate"
+			},
+			"soilRequirements": {
+				"type": "Well-drained Loamy soil",
+				"pH": "6.0-7.5"
+			},
+			"wateringNeeds": "Minimal irrigation, avoid waterlogging",
+			"estimatedYield": "0.8-1.5 tons per hectare",
+			"fertilizerRecommendations": "NPK 20:40:20",
+			"pestAndDiseaseManagement": {
+				"commonPests": ["Aphids", "Pod Borers"],
+				"diseases": ["Yellow Mosaic Virus", "Powdery Mildew"],
+				"controlMeasures": ["Use disease-resistant varieties, apply Neem oil"]
+			},
+			"marketInformation": {
+				"currentMarketValue": "₹60-80 per kg",
+				"demandAnalysis": "High demand as a protein-rich pulse"
+			},
+			"additionalInfo": {
+				"companionCrops": ["Maize", "Millets"],
+				"cropRotationSuggestions": ["Wheat", "Rice"],
+				"environmentalBenefits": "Improves soil nitrogen levels"
+			}
+		},
+		{
+			"name": "Blackgram",
+			"scientificName": "Vigna mungo",
+			"image_url": "https://www.khethari.com/cdn/shop/articles/Picture10.jpg?v=1718884424",
+			"crop_image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Black_gram.jpg",
+			"suitabilityScore": null,
+			"idealSowingTime": "June to July",
+			"climateRequirements": {
+				"temperature": "25-35°C",
+				"rainfall": "50-80 cm",
+				"humidity": "Moderate"
+			},
+			"soilRequirements": {
+				"type": "Loamy or Sandy soil",
+				"pH": "6.0-7.5"
+			},
+			"wateringNeeds": "Minimal, requires irrigation at critical stages",
+			"estimatedYield": "0.8-1.2 tons per hectare",
+			"fertilizerRecommendations": "NPK 20:40:20",
+			"pestAndDiseaseManagement": {
+				"commonPests": ["Stem Fly", "Aphids"],
+				"diseases": ["Yellow Mosaic Virus", "Leaf Spot"],
+				"controlMeasures": ["Crop rotation, use resistant varieties"]
+			},
+			"marketInformation": {
+				"currentMarketValue": "₹70-90 per kg",
+				"demandAnalysis": "High demand as a protein-rich food"
+			},
+			"additionalInfo": {
+				"companionCrops": ["Sorghum", "Pearl Millet"],
+				"cropRotationSuggestions": ["Rice", "Maize"],
+				"environmentalBenefits": "Improves soil fertility"
+			}
+		},
+		{
+			"name": "Lentil",
+			"scientificName": "Lens culinaris",
+			"image_url": "https://saskpulse.com/wp-content/uploads/2023/05/Growing-Lentils-Banner.jpg",
+			"crop_image": "https://plus.unsplash.com/premium_photo-1664007710992-ad36b7943edb?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			"suitabilityScore": null,
+			"idealSowingTime": "October to November",
+			"climateRequirements": {
+				"temperature": "18-30°C",
+				"rainfall": "40-75 cm",
+				"humidity": "Moderate"
+			},
+			"soilRequirements": {
+				"type": "Loamy or Sandy soil",
+				"pH": "5.5-7.0"
+			},
+			"wateringNeeds": "Minimal, avoid waterlogging",
+			"estimatedYield": "1-1.5 tons per hectare",
+			"fertilizerRecommendations": "NPK 20:40:20",
+			"pestAndDiseaseManagement": {
+				"commonPests": ["Cutworms", "Aphids"],
+				"diseases": ["Rust", "Wilt"],
+				"controlMeasures": ["Use fungicides, resistant varieties"]
+			},
+			"marketInformation": {
+				"currentMarketValue": "₹60-80 per kg",
+				"demandAnalysis": "Staple food crop with consistent demand"
+			},
+			"additionalInfo": {
+				"companionCrops": ["Cereal crops"],
+				"cropRotationSuggestions": ["Wheat", "Rice"],
+				"environmentalBenefits": "Enhances nitrogen content in soil"
+			}
+		},
+		{
+			"name": "Pomegranate",
+			"scientificName": "Punica granatum",
+			"image_url": "https://images.pexels.com/photos/17132344/pexels-photo-17132344/free-photo-of-a-pomergranate-on-a-bush.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"crop_image": "https://images.pexels.com/photos/65256/pomegranate-open-cores-fruit-fruit-logistica-65256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"suitabilityScore": null,
+			"idealSowingTime": "June to August or February to March",
+			"climateRequirements": {
+				"temperature": "25-35°C",
+				"rainfall": "50-75 cm",
+				"humidity": "Moderate"
+			},
+			"soilRequirements": {
+				"type": "Well-drained Loamy or Sandy soil",
+				"pH": "6.0-7.5"
+			},
+			"wateringNeeds": "Moderate irrigation required",
+			"estimatedYield": "10-15 tons per hectare",
+			"fertilizerRecommendations": "NPK 50:25:25",
+			"pestAndDiseaseManagement": {
+				"commonPests": ["Fruit Borer", "Aphids"],
+				"diseases": ["Leaf Spot", "Fruit Rot"],
+				"controlMeasures": ["Neem oil spray, proper pruning"]
+			},
+			"marketInformation": {
+				"currentMarketValue": "₹80-150 per kg",
+				"demandAnalysis": "High demand for fresh and processed markets"
+			},
+			"additionalInfo": {
+				"companionCrops": ["Legumes", "Vegetables"],
+				"cropRotationSuggestions": ["Cereals", "Vegetables"],
+				"environmentalBenefits": "High economic return with proper management"
+			}
+		},
+		{
+			"name": "Banana",
+			"scientificName": "Musa spp.",
+			"image_url": "https://images.pexels.com/photos/28880233/pexels-photo-28880233/free-photo-of-lush-green-bananas-on-a-tropical-tree.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"crop_image": "https://images.pexels.com/photos/2238309/pexels-photo-2238309.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"suitabilityScore": null,
+			"idealSowingTime": "February to May",
+			"climateRequirements": {
+				"temperature": "15-35°C",
+				"rainfall": "100-200 cm",
+				"humidity": "High"
+			},
+			"soilRequirements": {
+				"type": "Well-drained Loamy soil",
+				"pH": "6.0-7.5"
+			},
+			"wateringNeeds": "Requires frequent watering",
+			"estimatedYield": "30-40 tons per hectare",
+			"fertilizerRecommendations": "NPK 200:100:200",
+			"pestAndDiseaseManagement": {
+				"commonPests": ["Banana Stem Borer", "Nematodes"],
+				"diseases": ["Panama Wilt", "Sigatoka"],
+				"controlMeasures": [
+					"Use resistant varieties, chemical treatment for pests"
+				]
+			},
+			"marketInformation": {
+				"currentMarketValue": "₹15-25 per kg",
+				"demandAnalysis": "High demand for domestic and export markets"
+			},
+			"additionalInfo": {
+				"companionCrops": ["Legumes"],
+				"cropRotationSuggestions": ["Sugarcane", "Vegetables"],
+				"environmentalBenefits": "Acts as a perennial crop with high profitability"
+			}
+		},
+		{
+			"name": "Mango",
+			"scientificName": "Mangifera indica",
+			"image_url": "https://images.pexels.com/photos/23592194/pexels-photo-23592194/free-photo-of-fruits-on-a-tree.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"crop_image": "https://images.pexels.com/photos/2294471/pexels-photo-2294471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"suitabilityScore": null,
+			"idealSowingTime": "June to August",
+			"climateRequirements": {
+				"temperature": "24-30°C",
+				"rainfall": "75-250 cm",
+				"humidity": "Moderate"
+			},
+			"soilRequirements": {
+				"type": "Well-drained Loamy soil",
+				"pH": "5.5-7.5"
+			},
+			"wateringNeeds": "Moderate irrigation for young plants",
+			"estimatedYield": "10-15 tons per hectare",
+			"fertilizerRecommendations": "NPK 100:50:100",
+			"pestAndDiseaseManagement": {
+				"commonPests": ["Mango Hopper", "Fruit Fly"],
+				"diseases": ["Powdery Mildew", "Anthracnose"],
+				"controlMeasures": ["Neem oil spray, copper-based fungicides"]
+			},
+			"marketInformation": {
+				"currentMarketValue": "₹30-100 per kg",
+				"demandAnalysis": "High demand for fresh fruit and processed products"
+			},
+			"additionalInfo": {
+				"companionCrops": ["Pulses", "Legumes"],
+				"cropRotationSuggestions": ["Vegetables", "Sugarcane"],
+				"environmentalBenefits": "Provides shade and reduces soil erosion"
+			}
+		},
+		{
+			"name": "Grapes",
+			"scientificName": "Vitis vinifera",
+			"image_url": "https://images.pexels.com/photos/3373945/pexels-photo-3373945.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"crop_image": "https://images.pexels.com/photos/708777/pexels-photo-708777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"suitabilityScore": null,
+			"idealSowingTime": "December to January",
+			"climateRequirements": {
+				"temperature": "15-35°C",
+				"rainfall": "50-75 cm",
+				"humidity": "Low to Moderate"
+			},
+			"soilRequirements": {
+				"type": "Sandy Loam",
+				"pH": "6.0-7.0"
+			},
+			"wateringNeeds": "Drip irrigation recommended",
+			"estimatedYield": "20-25 tons per hectare",
+			"fertilizerRecommendations": "NPK 200:80:200",
+			"pestAndDiseaseManagement": {
+				"commonPests": ["Mealy Bugs", "Thrips"],
+				"diseases": ["Powdery Mildew", "Downy Mildew"],
+				"controlMeasures": ["Sulfur sprays, pruning infected vines"]
+			},
+			"marketInformation": {
+				"currentMarketValue": "₹40-80 per kg",
+				"demandAnalysis": "High demand for table fruit, wine production"
+			},
+			"additionalInfo": {
+				"companionCrops": ["Legumes"],
+				"cropRotationSuggestions": ["Wheat", "Millets"],
+				"environmentalBenefits": "Improves biodiversity in vineyards"
+			}
+		},
+		{
+			"name": "Watermelon",
+			"scientificName": "Citrullus lanatus",
+			"image_url": "https://images.pexels.com/photos/28160264/pexels-photo-28160264/free-photo-of-it-very-nice.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"crop_image": "https://images.pexels.com/photos/4966362/pexels-photo-4966362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"suitabilityScore": null,
+			"idealSowingTime": "March to May",
+			"climateRequirements": {
+				"temperature": "20-30°C",
+				"rainfall": "50-75 cm",
+				"humidity": "Moderate to High"
+			},
+			"soilRequirements": {
+				"type": "Sandy Loam",
+				"pH": "6.0-7.0"
+			},
+			"wateringNeeds": "Frequent watering, especially during fruiting stage",
+			"estimatedYield": "25-35 tons per hectare",
+			"fertilizerRecommendations": "NPK 100:50:100",
+			"pestAndDiseaseManagement": {
+				"commonPests": ["Aphids", "Cucumber Beetles"],
+				"diseases": ["Powdery Mildew", "Bacterial Wilt"],
+				"controlMeasures": ["Insecticides, crop rotation"]
+			},
+			"marketInformation": {
+				"currentMarketValue": "₹20-40 per kg",
+				"demandAnalysis": "High demand in summer, especially for fresh consumption"
+			},
+			"additionalInfo": {
+				"companionCrops": ["Corn", "Beans"],
+				"cropRotationSuggestions": ["Tomato", "Carrot"],
+				"environmentalBenefits": "Helps in soil moisture retention"
+			}
+		},
+		{
+			"name": "Muskmelon",
+			"scientificName": "Cucumis melo",
+			"image_url": "https://4.imimg.com/data4/FD/FU/MY-8729085/muskmelon-plants-1000x1000.jpg",
+			"crop_image": "https://findfresh.in/attachments/shop_images/51AV3hMvYSL__SL1000_.jpg",
+			"suitabilityScore": null,
+			"idealSowingTime": "April to June",
+			"climateRequirements": {
+				"temperature": "18-32°C",
+				"rainfall": "50-100 cm",
+				"humidity": "Moderate"
+			},
+			"soilRequirements": {
+				"type": "Sandy Loam",
+				"pH": "6.0-7.0"
+			},
+			"wateringNeeds": "Moderate watering, avoid over-watering",
+			"estimatedYield": "15-20 tons per hectare",
+			"fertilizerRecommendations": "NPK 120:60:120",
+			"pestAndDiseaseManagement": {
+				"commonPests": ["Cucumber Beetles", "Aphids"],
+				"diseases": ["Powdery Mildew", "Fusarium Wilt"],
+				"controlMeasures": ["Fungicides, insecticides"]
+			},
+			"marketInformation": {
+				"currentMarketValue": "₹30-50 per kg",
+				"demandAnalysis": "Good demand during summer months"
+			},
+			"additionalInfo": {
+				"companionCrops": ["Corn", "Beans"],
+				"cropRotationSuggestions": ["Cucumber", "Tomato"],
+				"environmentalBenefits": "Helps improve soil fertility"
+			}
+		},
+		{
+			"name": "Apple",
+			"scientificName": "Malus domestica",
+			"image_url": "https://images.unsplash.com/photo-1536246297549-267e01fea839?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			"crop_image": "https://plus.unsplash.com/premium_photo-1661322640130-f6a1e2c36653?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			"suitabilityScore": null,
+			"idealSowingTime": "November to February",
+			"climateRequirements": {
+				"temperature": "10-25°C",
+				"rainfall": "70-100 cm",
+				"humidity": "Moderate"
+			},
+			"soilRequirements": {
+				"type": "Loamy",
+				"pH": "6.0-7.0"
+			},
+			"wateringNeeds": "Regular watering, ensure good drainage",
+			"estimatedYield": "15-20 tons per hectare",
+			"fertilizerRecommendations": "NPK 150:75:150",
+			"pestAndDiseaseManagement": {
+				"commonPests": ["Aphids", "Codling Moth"],
+				"diseases": ["Apple Scab", "Powdery Mildew"],
+				"controlMeasures": ["Insecticides, pruning diseased parts"]
+			},
+			"marketInformation": {
+				"currentMarketValue": "₹60-120 per kg",
+				"demandAnalysis": "High demand in global markets, especially in winter"
+			},
+			"additionalInfo": {
+				"companionCrops": ["Garlic", "Onion"],
+				"cropRotationSuggestions": ["Beans", "Cabbage"],
+				"environmentalBenefits": "Helps conserve soil structure and moisture"
+			}
+		},
+		{
+			"name": "Orange",
+			"scientificName": "Citrus sinensis",
+			"image_url": "https://images.pexels.com/photos/2171374/pexels-photo-2171374.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"crop_image": "https://images.pexels.com/photos/327098/pexels-photo-327098.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"suitabilityScore": null,
+			"idealSowingTime": "March to May",
+			"climateRequirements": {
+				"temperature": "20-30°C",
+				"rainfall": "100-150 cm",
+				"humidity": "High"
+			},
+			"soilRequirements": {
+				"type": "Loamy",
+				"pH": "6.0-7.5"
+			},
+			"wateringNeeds": "Deep watering, especially during fruit development",
+			"estimatedYield": "20-30 tons per hectare",
+			"fertilizerRecommendations": "NPK 150:100:150",
+			"pestAndDiseaseManagement": {
+				"commonPests": ["Aphids", "Scale Insects"],
+				"diseases": ["Citrus Canker", "Root Rot"],
+				"controlMeasures": ["Fungicides, pruning affected parts"]
+			},
+			"marketInformation": {
+				"currentMarketValue": "₹40-70 per kg",
+				"demandAnalysis": "Consistent demand, especially for juicing and fresh consumption"
+			},
+			"additionalInfo": {
+				"companionCrops": ["Beans", "Corn"],
+				"cropRotationSuggestions": ["Wheat", "Tomato"],
+				"environmentalBenefits": "Helps reduce soil erosion"
+			}
+		},
+		{
+			"name": "Papaya",
+			"scientificName": "Carica papaya",
+			"image_url": "https://images.pexels.com/photos/7839741/pexels-photo-7839741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"crop_image": "https://images.pexels.com/photos/5945739/pexels-photo-5945739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"suitabilityScore": null,
+			"idealSowingTime": "January to March",
+			"climateRequirements": {
+				"temperature": "25-35°C",
+				"rainfall": "75-100 cm",
+				"humidity": "High"
+			},
+			"soilRequirements": {
+				"type": "Sandy Loam",
+				"pH": "6.0-7.5"
+			},
+			"wateringNeeds": "Moderate watering, avoid waterlogging",
+			"estimatedYield": "20-30 tons per hectare",
+			"fertilizerRecommendations": "NPK 150:75:150",
+			"pestAndDiseaseManagement": {
+				"commonPests": ["Mealy Bugs", "Fruit Flies"],
+				"diseases": ["Powdery Mildew", "Root Rot"],
+				"controlMeasures": ["Insecticides, fungicides"]
+			},
+			"marketInformation": {
+				"currentMarketValue": "₹25-45 per kg",
+				"demandAnalysis": "High demand in tropical regions, especially for fresh consumption"
+			},
+			"additionalInfo": {
+				"companionCrops": ["Chili", "Corn"],
+				"cropRotationSuggestions": ["Legumes", "Tomatoes"],
+				"environmentalBenefits": "Improves soil health by adding organic matter"
+			}
+		},
+		{
+			"name": "Coconut",
+			"scientificName": "Cocos nucifera",
+			"image_url": "https://plus.unsplash.com/premium_photo-1666805690489-59d72f05b371?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			"crop_image": "https://images.pexels.com/photos/3986706/pexels-photo-3986706.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"suitabilityScore": null,
+			"idealSowingTime": "June to August",
+			"climateRequirements": {
+				"temperature": "25-30°C",
+				"rainfall": "150-200 cm",
+				"humidity": "High"
+			},
+			"soilRequirements": {
+				"type": "Loamy",
+				"pH": "6.0-7.5"
+			},
+			"wateringNeeds": "Frequent watering, especially during dry periods",
+			"estimatedYield": "50-60 nuts per tree",
+			"fertilizerRecommendations": "NPK 100:50:100",
+			"pestAndDiseaseManagement": {
+				"commonPests": ["Red Palm Weevil", "Leaf Beetle"],
+				"diseases": ["Leaf Spot", "Fusarium Wilt"],
+				"controlMeasures": ["Insecticides, pruning infected leaves"]
+			},
+			"marketInformation": {
+				"currentMarketValue": "₹40-60 per nut",
+				"demandAnalysis": "High demand for oil, milk, and fresh consumption"
+			},
+			"additionalInfo": {
+				"companionCrops": ["Cacao", "Banana"],
+				"cropRotationSuggestions": ["Beans", "Sweet Potato"],
+				"environmentalBenefits": "Helps prevent soil erosion and improves soil fertility"
+			}
+		},
+		{
+			"name": "Cotton",
+			"scientificName": "Gossypium spp.",
+			"image_url": "https://cdn.pixabay.com/photo/2019/11/26/12/54/cotton-4654533_1280.jpg",
+			"crop_image": "https://images.pexels.com/photos/6851273/pexels-photo-6851273.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"suitabilityScore": null,
+			"idealSowingTime": "April to May",
+			"climateRequirements": {
+				"temperature": "25-30°C",
+				"rainfall": "50-100 cm",
+				"humidity": "Moderate"
+			},
+			"soilRequirements": {
+				"type": "Loamy",
+				"pH": "6.0-7.5"
+			},
+			"wateringNeeds": "Moderate watering, avoid over-watering",
+			"estimatedYield": "400-800 kg per hectare",
+			"fertilizerRecommendations": "NPK 150:75:150",
+			"pestAndDiseaseManagement": {
+				"commonPests": ["Cotton Bollworm", "Aphids"],
+				"diseases": ["Cotton Blight", "Verticillium Wilt"],
+				"controlMeasures": ["Insecticides, crop rotation"]
+			},
+			"marketInformation": {
+				"currentMarketValue": "₹90-150 per kg",
+				"demandAnalysis": "High demand for fabric and textiles"
+			},
+			"additionalInfo": {
+				"companionCrops": ["Maize", "Peanut"],
+				"cropRotationSuggestions": ["Soybean", "Wheat"],
+				"environmentalBenefits": "Helps improve soil fertility through organic matter"
+			}
+		},
+		{
+			"name": "Jute",
+			"scientificName": "Corchorus spp.",
+			"image_url": "https://gojuteinternational.com/wp-content/uploads/2024/01/Jute-Cultivation-jpg.webp",
+			"crop_image": "https://images.pexels.com/photos/7717489/pexels-photo-7717489.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"suitabilityScore": null,
+			"idealSowingTime": "June to July",
+			"climateRequirements": {
+				"temperature": "25-35°C",
+				"rainfall": "150-250 cm",
+				"humidity": "High"
+			},
+			"soilRequirements": {
+				"type": "Loamy",
+				"pH": "6.0-7.0"
+			},
+			"wateringNeeds": "Regular watering, especially during the growing phase",
+			"estimatedYield": "1.5-2.5 tons per hectare",
+			"fertilizerRecommendations": "NPK 100:50:100",
+			"pestAndDiseaseManagement": {
+				"commonPests": ["Jute Weevil", "Aphids"],
+				"diseases": ["Wilt Disease", "Fusarium Root Rot"],
+				"controlMeasures": ["Insecticides, crop rotation"]
+			},
+			"marketInformation": {
+				"currentMarketValue": "₹30-60 per kg",
+				"demandAnalysis": "High demand for eco-friendly textiles and packaging"
+			},
+			"additionalInfo": {
+				"companionCrops": ["Rice", "Mustard"],
+				"cropRotationSuggestions": ["Wheat", "Legumes"],
+				"environmentalBenefits": "Helps reduce soil erosion and improves soil structure"
+			}
+		},
+		{
+			"name": "Coffee",
+			"scientificName": "Coffea spp.",
+			"image_url": "https://plus.unsplash.com/premium_photo-1666976509887-e33fa169533f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			"crop_image": "https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+			"suitabilityScore": null,
+			"idealSowingTime": "March to April",
+			"climateRequirements": {
+				"temperature": "18-24°C",
+				"rainfall": "1500-2500 mm",
+				"humidity": "High"
+			},
+			"soilRequirements": {
+				"type": "Loamy",
+				"pH": "6.0-6.5"
+			},
+			"wateringNeeds": "Frequent watering, ensure good drainage",
+			"estimatedYield": "1000-1500 kg per hectare",
+			"fertilizerRecommendations": "NPK 100:50:150",
+			"pestAndDiseaseManagement": {
+				"commonPests": ["Coffee Borer Beetle", "White Stem Borer"],
+				"diseases": ["Coffee Rust", "Cercospora Leaf Spot"],
+				"controlMeasures": ["Organic insecticides, crop sanitation"]
+			},
+			"marketInformation": {
+				"currentMarketValue": "₹150-350 per kg",
+				"demandAnalysis": "High global demand for both arabica and robusta varieties"
+			},
+			"additionalInfo": {
+				"companionCrops": ["Banana", "Cardamom"],
+				"cropRotationSuggestions": ["Beans", "Pepper"],
+				"environmentalBenefits": "Helps maintain biodiversity in tropical ecosystems"
+			}
+		}
+	]
+}

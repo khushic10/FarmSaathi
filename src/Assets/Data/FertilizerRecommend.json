@@ -1,0 +1,121 @@
+[
+	{
+		"name": "Urea",
+		"type": "Nitrogen Fertilizer",
+		"image": "https://ishtarcompany.com/wp-content/uploads/elementor/thumbs/Iran-urea-n46-q9tt5pwjvyo9rba79ty1p8yj10ojynkq74qtmduvfk.jpg",
+		"description": "Urea is a highly concentrated nitrogen fertilizer, widely used for promoting vegetative growth in crops. It is easily soluble in water and provides a quick source of nitrogen to plants.",
+		"composition": {
+			"N": 46,
+			"P": 0,
+			"K": 0
+		},
+		"application": {
+			"usage": "Provides a quick source of nitrogen for plants.",
+			"method": "Broadcast or side-dress during the vegetative growth stage.",
+			"dosage": "50-100 kg/ha per application, depending on crop type and growth stage."
+		},
+		"notes": "Avoid applying before heavy rainfall to reduce nitrogen loss due to leaching."
+	},
+	{
+		"name": "DAP",
+		"type": "Nitrogen-Phosphorus Fertilizer",
+		"image": "https://radhakrishnaagriculture.in/cdn/shop/files/dap1kg.jpg?v=1711178446&width=823",
+		"description": "Diammonium phosphate (DAP) is a popular phosphorus and nitrogen fertilizer used to support root development and early plant growth. It also provides a small amount of nitrogen.",
+		"composition": {
+			"N": 18,
+			"P": 46,
+			"K": 0
+		},
+		"application": {
+			"usage": "Provides nitrogen and phosphorus for root development and overall growth.",
+			"method": "Apply at planting time or as a basal dose.",
+			"dosage": "100-150 kg/ha, depending on soil nutrient levels and crop needs."
+		},
+		"notes": "Incorporate into the soil to prevent phosphorus fixation."
+	},
+	{
+		"name": "14-35-14",
+		"type": "NPK Complex Fertilizer",
+		"image": "https://m.media-amazon.com/images/I/51mdrcnk4OL.jpg",
+		"description": "This fertilizer contains a high amount of phosphorus, which is ideal for crops during early growth stages to promote strong root development.",
+		"composition": {
+			"N": 14,
+			"P": 35,
+			"K": 14
+		},
+		"application": {
+			"usage": "Balances nitrogen, phosphorus, and potassium for optimal growth.",
+			"method": "Apply as a basal dose or top-dressing, depending on crop requirement.",
+			"dosage": "100-120 kg/ha."
+		},
+		"notes": "Suitable for early crop stages requiring high phosphorus."
+	},
+	{
+		"name": "28-28",
+		"type": "NPK Complex Fertilizer",
+		"image": "https://sanxfertilisers.com//uploads/admin/202108031736192767748_complex_fertilizer_npk_28_28_0.jpg",
+		"description": "This fertilizer provides equal amounts of nitrogen and phosphorus, making it suitable for early growth stages when plants need strong vegetative development.",
+		"composition": {
+			"N": 28,
+			"P": 28,
+			"K": 0
+		},
+		"application": {
+			"usage": "Provides balanced nitrogen and phosphorus for crops.",
+			"method": "Apply during early growth stages.",
+			"dosage": "80-100 kg/ha."
+		},
+		"notes": "Ensure proper irrigation after application for better absorption."
+	},
+	{
+		"name": "17-17-17",
+		"type": "NPK Balanced Fertilizer",
+		"image": "https://cpimg.tistatic.com/08465112/b/4/17-17-17-Granualted-Npk-Fertilizer.jpg",
+		"description": "A balanced NPK fertilizer that is ideal for crops requiring an equal supply of nitrogen, phosphorus, and potassium throughout the growing season.",
+		"composition": {
+			"N": 17,
+			"P": 17,
+			"K": 17
+		},
+		"application": {
+			"usage": "All-purpose fertilizer for balanced nutrient supply.",
+			"method": "Apply during vegetative or flowering stages.",
+			"dosage": "120-150 kg/ha."
+		},
+		"notes": "Use for crops requiring balanced nutrient support throughout the growth cycle."
+	},
+	{
+		"name": "20-20",
+		"type": "NPK Complex Fertilizer",
+		"image": "https://store.veggieconcept.ng/wp-content/uploads/2023/08/NPK-202020-Fertilizer.jpg",
+		"description": "This fertilizer contains balanced nitrogen and phosphorus, making it suitable for crops in their early stages of development.",
+		"composition": {
+			"N": 20,
+			"P": 20,
+			"K": 0
+		},
+		"application": {
+			"usage": "Provides nitrogen and phosphorus for general growth.",
+			"method": "Apply as a basal or top-dressing dose.",
+			"dosage": "100-120 kg/ha."
+		},
+		"notes": "Avoid over-application to prevent phosphorus buildup in soil."
+	},
+	{
+		"name": "10-26-26",
+		"type": "NPK Complex Fertilizer",
+		"image": "https://farmfields.net/wp-content/uploads/2017/05/NPK-12-32-16.jpg",
+		"description": "This fertilizer has high phosphorus and potassium content, making it ideal for the flowering and fruiting stages of crops to enhance yield and quality.",
+		"composition": {
+			"N": 10,
+			"P": 26,
+			"K": 26
+		},
+		"application": {
+			"usage": "Ideal for flowering and fruiting stages due to high phosphorus and potassium.",
+			"method": "Apply during flowering or fruiting stages.",
+			"dosage": "80-100 kg/ha."
+		},
+		"notes": "Ensures proper root development and fruit quality."
+	}
+]

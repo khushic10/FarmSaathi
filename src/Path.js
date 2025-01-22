@@ -8,6 +8,8 @@ import Register from "./Pages/Register";
 import FertilizerRecommendation from "./Pages/FertilizerRecommendation";
 import PrivateRoute from "./Components/PrivateRoute";
 import Recommendation from "./Pages/Recommendation";
+import RecommendedCrop from "./Pages/RecommendedCrop";
+import RecommendedFertilizer from "./Pages/RecommendedFertilizer";
 
 export default function Path() {
 	return (
@@ -47,7 +49,24 @@ export default function Path() {
 							</PrivateRoute>
 						}
 					/>
+					<Route
+						path="/recommendation/recommended/crop/:cropName"
+						element={
+							<PrivateRoute>
+								<RecommendedCrop />
+							</PrivateRoute>
+						}
+					/>
+					<Route
+						path="/recommendation/recommended/fertilizer/:fertilizerName"
+						element={
+							<PrivateRoute>
+								<RecommendedFertilizer />
+							</PrivateRoute>
+						}
+					/>
 				</Route>
+
 				<Route path="/login" element={<Login />} />
 				<Route path="/register" element={<Register />} />
 			</Routes>

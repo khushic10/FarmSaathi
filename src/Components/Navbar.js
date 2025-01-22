@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Styles/Navbar.scss";
 import { NavLink, useNavigate } from "react-router-dom";
 import Logo from "../Assets/Time.png";
-import User from "../Assets/user.png";
+import User from "../Assets/profile.png";
 import { useCookies } from "react-cookie";
 
 export default function Navbar() {
@@ -41,7 +41,7 @@ export default function Navbar() {
 
 	return (
 		<div className="navbar-main">
-			<div>
+			<div className="navbar-logo">
 				<img
 					src={Logo}
 					alt=""
@@ -50,17 +50,19 @@ export default function Navbar() {
 					style={{ borderRadius: "50%", padding: "0.2rem", margin: "0.4rem" }}
 				/>
 			</div>
-			<ul>
-				<NavLink to="/">
-					<li>Home</li>
-				</NavLink>
-				<NavLink to={`/crops/${page}`}>
-					<li>Crops Overview</li>
-				</NavLink>
-				<NavLink to="/recommendation">
-					<li>Recommendation System</li>
-				</NavLink>
-			</ul>
+			<div>
+				<ul>
+					<NavLink to="/">
+						<li>Home</li>
+					</NavLink>
+					<NavLink to={`/crops/${page}`}>
+						<li>Crops Overview</li>
+					</NavLink>
+					<NavLink to="/recommendation">
+						<li>Recommendation System</li>
+					</NavLink>
+				</ul>
+			</div>
 			<div className="navbar-login-main">
 				{!token ? (
 					<NavLink to="/login">

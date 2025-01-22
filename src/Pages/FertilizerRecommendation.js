@@ -6,25 +6,20 @@ import { useNavigate } from "react-router-dom";
 import useFormValidation from "../Hooks/useFormValidation";
 import Agriculture from "../Assets/agriculture.jpeg";
 import BASE_URL from "../Config/Config";
+import CustomSelect from "../Components/CustomSelect";
 
 const FertilizerRecommendation = () => {
 	const nav = useNavigate();
 	const [error, setError] = useState("");
 	const [loading, setLoading] = useState(false);
 
-	const [eye, setEye] = useState(false);
-
-	const handleTogglePassword = () => {
-		setEye(!eye);
-	};
-
 	const initialFormState = {
-		N: "",
-		P: "",
-		K: "",
-		temperature: "",
-		humidity: "",
-		moisture: "",
+		N: null,
+		P: null,
+		K: null,
+		temperature: null,
+		humidity: null,
+		moisture: null,
 		soil_type: "",
 		crop_type: "",
 	};
@@ -50,6 +45,12 @@ const FertilizerRecommendation = () => {
 				});
 				if (response.ok) {
 					const data = await response.json();
+					nav(
+						`/recommendation/recommended/fertilizer/${data.recommended_fertilizer}`,
+						{
+							state: { formData },
+						}
+					);
 					console.log(data);
 				} else {
 					const error = await response.json();
@@ -73,9 +74,7 @@ const FertilizerRecommendation = () => {
 				display: "flex",
 				justifyContent: "center",
 				alignItems: "flex-start",
-				minHeight: "80vh",
 				position: "relative",
-				overflow: "auto",
 			}}
 		>
 			<Paper
@@ -108,7 +107,9 @@ const FertilizerRecommendation = () => {
 							borderColor="#cead25"
 							type="number"
 							onChange={handleChange}
-							value={formData.nitrogen}
+							value={formData.N}
+							error={errors.N}
+							helperText={errors.N}
 						/>
 						<CustomTextField
 							title="Phosphorus (P)"
@@ -117,7 +118,9 @@ const FertilizerRecommendation = () => {
 							borderColor="#cead25"
 							type="Number"
 							onChange={handleChange}
-							value={formData.phosphorus}
+							value={formData.P}
+							error={errors.P}
+							helperText={errors.P}
 							sx={{ mt: 2 }}
 						/>
 						<CustomTextField
@@ -127,7 +130,9 @@ const FertilizerRecommendation = () => {
 							type="Number"
 							borderColor="#cead25"
 							onChange={handleChange}
-							value={formData.potassium}
+							value={formData.K}
+							error={errors.K}
+							helperText={errors.K}
 							sx={{ mt: 2 }}
 						/>
 					</Box>
@@ -139,22 +144,26 @@ const FertilizerRecommendation = () => {
 						}}
 					>
 						<CustomTextField
-							title="Temperature"
+							title="Temperature (°C)"
 							name="temperature"
 							placeholder="Enter the temperature value"
 							borderColor="#cead25"
 							type="number"
 							onChange={handleChange}
 							value={formData.temperature}
+							error={errors.temperature}
+							helperText={errors.temperature}
 						/>
 						<CustomTextField
-							title="Humidity"
+							title="Humidity (%)"
 							name="humidity"
 							placeholder="Enter the humidity value"
 							borderColor="#cead25"
 							type="Number"
 							onChange={handleChange}
 							value={formData.humidity}
+							error={errors.humidity}
+							helperText={errors.humidity}
 							sx={{ mt: 2 }}
 						/>
 					</Box>
@@ -166,32 +175,59 @@ const FertilizerRecommendation = () => {
 						}}
 					>
 						<CustomTextField
-							title="Moisture"
+							title="Moisture (%)"
 							name="moisture"
 							placeholder="Enter the moisture value"
 							borderColor="#cead25"
 							type="number"
 							value={formData.moisture}
 							onChange={handleChange}
+							error={errors.moisture}
+							helperText={errors.moisture}
 						/>
-						<CustomTextField
+						<CustomSelect
 							title="Crop Type"
 							name="crop_type"
-							placeholder="Enter the type of crop"
-							borderColor="#cead25"
-							type="Text"
 							value={formData.crop_type}
 							onChange={handleChange}
+							options={[
+								{ value: "Maize", label: "Maize" },
+								{ value: "Sugarcane", label: "Sugarcane" },
+								{ value: "Cotton", label: "Cotton" },
+								{ value: "Tobacco", label: "Tobacco" },
+								{ value: "Paddy", label: "Paddy" },
+								{ value: "Barley", label: "Barley" },
+								{ value: "Wheat", label: "Wheat" },
+								{ value: "Millets", label: "Millets" },
+								{ value: "Oil seeds", label: "Oil seeds" },
+								{ value: "Pulses", label: "Pulses" },
+								{ value: "Ground Nuts", label: "Ground Nuts" },
+							]}
+							placeholder="Enter the type of crop"
+							error={errors.crop_type}
+							helperText={errors.crop_type}
+							label="Crop Type"
+							borderColor="#cead25"
 						/>
-						<CustomTextField
+						<CustomSelect
 							title="Soil Type"
 							name="soil_type"
 							placeholder="Enter the type of soil"
 							borderColor="#cead25"
 							type="Text"
 							value={formData.soil_type}
+							error={errors.soil_type}
+							helperText={errors.soil_type}
 							onChange={handleChange}
 							sx={{ mt: 2 }}
+							options={[
+								{ value: "Sandy", label: "Sandy" },
+								{ value: "Loamy", label: "Loamy" },
+								{ value: "Clayey", label: "Clayey" },
+								{ value: "Black", label: "Black" },
+								{ value: "Red", label: "Red" },
+							]}
+							label="Crop Type"
 						/>
 					</Box>
 					<Button

@@ -13,13 +13,13 @@ const CropRecommendation = () => {
 	const [error, setError] = useState("");
 	const [loading, setLoading] = useState(false);
 	const initialFormState = {
-		N: "",
-		P: "",
-		K: "",
-		temperature: "",
-		humidity: "",
-		rainfall: "",
-		ph: "",
+		N: null,
+		P: null,
+		K: null,
+		temperature: null,
+		humidity: null,
+		rainfall: null,
+		ph: null,
 	};
 
 	const { formData, setErrors, errors, handleChange, validateForm } =
@@ -42,6 +42,9 @@ const CropRecommendation = () => {
 				});
 				if (response.ok) {
 					const data = await response.json();
+					nav(`/recommendation/recommended/crop/${data.recommended_crop}`, {
+						state: { formData },
+					});
 					console.log(data);
 				} else {
 					const error = await response.json();
@@ -62,9 +65,7 @@ const CropRecommendation = () => {
 				display: "flex",
 				justifyContent: "center",
 				alignItems: "flex-start",
-				minHeight: "80vh",
 				position: "relative",
-				overflow: "auto",
 			}}
 		>
 			<Paper
@@ -98,6 +99,8 @@ const CropRecommendation = () => {
 							type="number"
 							onChange={handleChange}
 							value={formData.N}
+							error={errors.N}
+							helperText={errors.N}
 						/>
 						<CustomTextField
 							title="Phosphorus (P)"
@@ -107,6 +110,8 @@ const CropRecommendation = () => {
 							type="Number"
 							onChange={handleChange}
 							value={formData.P}
+							error={errors.P}
+							helperText={errors.P}
 							sx={{ mt: 2 }}
 						/>
 						<CustomTextField
@@ -117,6 +122,8 @@ const CropRecommendation = () => {
 							borderColor="#cead25"
 							onChange={handleChange}
 							value={formData.K}
+							error={errors.K}
+							helperText={errors.K}
 							sx={{ mt: 2 }}
 						/>
 					</Box>
@@ -128,22 +135,26 @@ const CropRecommendation = () => {
 						}}
 					>
 						<CustomTextField
-							title="Temperature"
+							title="Temperature (°C)"
 							name="temperature"
 							placeholder="Enter the temperature value"
 							borderColor="#cead25"
 							type="number"
 							onChange={handleChange}
 							value={formData.temperature}
+							error={errors.temperature}
+							helperText={errors.temperature}
 						/>
 						<CustomTextField
-							title="Humidity"
+							title="Humidity (%)"
 							name="humidity"
 							placeholder="Enter the humidity value"
 							borderColor="#cead25"
 							type="Number"
 							onChange={handleChange}
 							value={formData.humidity}
+							error={errors.humidity}
+							helperText={errors.humidity}
 							sx={{ mt: 2 }}
 						/>
 					</Box>
@@ -161,16 +172,20 @@ const CropRecommendation = () => {
 							borderColor="#cead25"
 							onChange={handleChange}
 							value={formData.ph}
+							error={errors.ph}
+							helperText={errors.ph}
 							type="number"
 						/>
 						<CustomTextField
-							title="Rainfall"
+							title="Rainfall (mm)"
 							name="rainfall"
 							placeholder="Enter the rainfall value"
 							borderColor="#cead25"
 							type="Number"
 							onChange={handleChange}
 							value={formData.rainfall}
+							error={errors.rainfall}
+							helperText={errors.rainfall}
 							sx={{ mt: 2 }}
 						/>
 					</Box>
@@ -181,6 +196,8 @@ const CropRecommendation = () => {
 							mt: 3,
 							bgcolor: "#6e7525",
 							color: "#fff",
+							fontSize: "1.1rem",
+							fontWeight: 500,
 							"&:hover": { bgcolor: "#425e0f" },
 						}}
 						type="submit"

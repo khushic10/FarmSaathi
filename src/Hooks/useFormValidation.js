@@ -7,13 +7,11 @@ const useFormValidation = (initialState) => {
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
-		if (name === "bannerUrls") {
-		} else {
-			setFormData((prevFormData) => ({
-				...prevFormData,
-				[name]: value,
-			}));
-		}
+
+		setFormData((prevFormData) => ({
+			...prevFormData,
+			[name]: value,
+		}));
 
 		const validationErrors = validateField(name, value);
 		setErrors((prevErrors) => ({
@@ -22,39 +20,13 @@ const useFormValidation = (initialState) => {
 		}));
 	};
 
-	const handleFileChange = (e) => {
-		const { name, files } = e.target;
-		const file = files[0];
-		setFormData({
-			...formData,
-			[name]: file,
-		});
-		const validationErrors = validateField(name, file);
-		setErrors({
-			...errors,
-			[name]: validationErrors,
-		});
-	};
-
 	const validateField = (fieldName, value) => {
 		let fieldErrors = null;
 
 		if (
-			fieldName === "firstName" ||
-			fieldName === "lastName" ||
-			fieldName === "address" ||
-			fieldName === "travelDestination" ||
-			fieldName === "remarks" ||
-			fieldName === "fullName" ||
-			fieldName === "role" ||
-			// fieldName === "voucherImageUrl" ||
-			fieldName === "numberOfPassengers" ||
-			fieldName === "packagePrice" ||
-			fieldName === "advancePayment" ||
-			fieldName === "fromDate" ||
-			fieldName === "toDate" ||
-			fieldName === "packageName" ||
-			fieldName === "packagePrice"
+			fieldName === "userName" ||
+			fieldName === "crop_type" ||
+			fieldName === "soil_type"
 		) {
 			if (typeof value === "string") {
 				fieldErrors = !value.trim() ? `${fieldName} is required` : null;
@@ -66,6 +38,7 @@ const useFormValidation = (initialState) => {
 					: null;
 		} else if (
 			fieldName === "password" ||
+			fieldName === "password2" ||
 			fieldName === "newPassword" ||
 			fieldName === "oldPassword"
 		) {
@@ -73,7 +46,7 @@ const useFormValidation = (initialState) => {
 				!value.trim() || !/^(?=.{8,})/.test(value)
 					? `${fieldName} should be 8 characters`
 					: null;
-		} else if (fieldName === "confirmPassword") {
+		} else if (fieldName === "password2") {
 			if (!value.trim() || !/^(?=.{8,})/.test(value))
 				fieldErrors = `${fieldName} should be 8 characters`;
 			else if (formData.password) {
@@ -85,17 +58,33 @@ const useFormValidation = (initialState) => {
 					fieldErrors = "New Password and Confirm Password must be same.";
 				}
 			} else fieldErrors = null;
-		} else if (fieldName === "email" || fieldName === "applyEmail") {
+		} else if (fieldName === "email") {
 			fieldErrors =
 				!value.trim() || !/\S+@\S+\.\S+/.test(value)
 					? "email is invalid"
 					: null;
-		} else if (fieldName === "numberOfPassengers") {
-			fieldErrors = value <= 0 ? "Number Of Passengers is required" : null;
 		} else if (fieldName === "packagePrice") {
 			fieldErrors = value <= 0 ? "Package Price is required" : null;
-		} else if (fieldName === "Advance Payment") {
-			fieldErrors = value <= 0 ? "advancePayment is required" : null;
+		} else if (fieldName === "ph") {
+			fieldErrors =
+				value < 0 || value > 14 || value === null
+					? "The pH value must be between 0 and 14"
+					: null;
+		} else if (fieldName === "humidity" || fieldName === "moisture") {
+			fieldErrors =
+				value < 0 || value > 100 || value === null
+					? `The ${fieldName} value must be between 0 and 100`
+					: null;
+		} else if (fieldName === "temperature") {
+			fieldErrors =
+				value < -10 || value > 60 || value === null
+					? "The temperature value must be between -10 to 60"
+					: null;
+		} else if (fieldName === "rainfall") {
+			fieldErrors =
+				value < 0 || value > 12000 || value === null
+					? "The rainfall value must be 0 to 12000"
+					: null;
 		} else {
 			fieldErrors = value === null ? `${fieldName} is required` : null;
 		}
@@ -120,7 +109,6 @@ const useFormValidation = (initialState) => {
 		errors,
 		setErrors,
 		handleChange,
-		handleFileChange,
 		// handleFilesChange,
 		validateForm,
 	};
