@@ -1,12 +1,14 @@
 import React from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import fertilizerData from "../Assets/Data/FertilizerRecommend.json"; // Assuming your JSON file is in this directory
 import "./Styles/RecommendFertilizer.scss";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 export default function RecommendedFertilizer() {
 	const location = useLocation();
 	const { fertilizerName } = useParams();
 	const formData = location.state?.formData;
+	const nav = useNavigate();
 
 	// Find the fertilizer data by name
 	const fertilizer = fertilizerData.find(
@@ -18,9 +20,15 @@ export default function RecommendedFertilizer() {
 	if (!fertilizer) {
 		return <div>Fertilizer not found!</div>;
 	}
+	const handleBack = () => {
+		nav(-1);
+	};
 
 	return (
 		<div className="container">
+			<div className="back-button" onClick={() => handleBack()}>
+				<ArrowBackIcon />
+			</div>
 			<div className="top-text">
 				The fertilizer recommendation according to the soil, weather and crop
 				parameters is {fertilizerName}.

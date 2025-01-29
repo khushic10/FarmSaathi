@@ -1,12 +1,14 @@
 import React from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import cropData from "../Assets/Data/RecommendCrops.json"; // Assuming your JSON file is in the same directory
 import "./Styles/RecommendCrop.scss";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 export default function RecommendedCrop() {
 	const location = useLocation();
 	const { cropName } = useParams();
 	const formData = location.state?.formData;
+	const nav = useNavigate();
 
 	// Find the crop data by name
 	const crop = cropData.crops.find(
@@ -18,9 +20,15 @@ export default function RecommendedCrop() {
 	if (!crop) {
 		return <div>Crop not found!</div>;
 	}
+	const handleBack = () => {
+		nav(-1);
+	};
 
 	return (
 		<div className="container">
+			<div className="back-button" onClick={() => handleBack()}>
+				<ArrowBackIcon />
+			</div>
 			<div className="top-text">
 				The crop recommendation according to the soil and weather parameters is{" "}
 				{cropName}.

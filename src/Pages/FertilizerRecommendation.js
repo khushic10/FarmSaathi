@@ -1,5 +1,5 @@
 // SignUpForm.js
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Button, Typography, Paper } from "@mui/material";
 import CustomTextField from "../Components/CustomTextField";
 import { useNavigate } from "react-router-dom";
@@ -24,6 +24,10 @@ const FertilizerRecommendation = () => {
 		crop_type: "",
 	};
 
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: "smooth" });
+	}, []);
+
 	const { formData, setErrors, errors, handleChange, validateForm } =
 		useFormValidation(initialFormState);
 
@@ -31,7 +35,6 @@ const FertilizerRecommendation = () => {
 		e.preventDefault();
 
 		const validationErrors = validateForm(formData);
-		console.log(formData);
 
 		if (Object.keys(validationErrors).length === 0) {
 			setLoading(true);
@@ -51,7 +54,7 @@ const FertilizerRecommendation = () => {
 							state: { formData },
 						}
 					);
-					console.log(data);
+					setLoading(false);
 				} else {
 					const error = await response.json();
 					console.log(error);
@@ -64,9 +67,6 @@ const FertilizerRecommendation = () => {
 		} else {
 			setErrors(validationErrors);
 		}
-	};
-	const onSwitch = () => {
-		nav("/login");
 	};
 	return (
 		<Box
@@ -93,6 +93,17 @@ const FertilizerRecommendation = () => {
 					>
 						Fertilizer Recommendation
 					</Typography>
+					{error && (
+						<Box
+							sx={{
+								color: "red",
+								fontSize: "1rem",
+								textAlign: "center",
+							}}
+						>
+							{error}
+						</Box>
+					)}
 					<Box
 						sx={{
 							display: "grid",
@@ -240,6 +251,7 @@ const FertilizerRecommendation = () => {
 							color: "#fff",
 							"&:hover": { bgcolor: "#425e0f" },
 						}}
+						disabled={loading}
 					>
 						Get Recommendations
 					</Button>

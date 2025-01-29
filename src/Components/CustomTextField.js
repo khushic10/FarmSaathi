@@ -1,5 +1,13 @@
 import React from "react";
-import { Box, TextField, Typography } from "@mui/material";
+import {
+	Box,
+	IconButton,
+	InputAdornment,
+	TextField,
+	Typography,
+} from "@mui/material";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 const CustomTextField = ({
 	title,
@@ -17,6 +25,8 @@ const CustomTextField = ({
 	borderWidth,
 	borderRadius,
 	minHeight,
+	eye,
+	onEye,
 }) => {
 	return (
 		<Box>
@@ -43,6 +53,15 @@ const CustomTextField = ({
 				type={type || "text"}
 				fullWidth={fullWidth}
 				variant={variant}
+				InputProps={{
+					endAdornment: eye !== undefined && (
+						<InputAdornment position="end">
+							<IconButton onClick={onEye} edge="end">
+								{eye ? <VisibilityIcon /> : <VisibilityOffIcon />}
+							</IconButton>
+						</InputAdornment>
+					),
+				}}
 				sx={{
 					"& .MuiOutlinedInput-root": {
 						"& fieldset": {

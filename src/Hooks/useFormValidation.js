@@ -24,7 +24,7 @@ const useFormValidation = (initialState) => {
 		let fieldErrors = null;
 
 		if (
-			fieldName === "userName" ||
+			fieldName === "username" ||
 			fieldName === "crop_type" ||
 			fieldName === "soil_type"
 		) {
@@ -38,17 +38,16 @@ const useFormValidation = (initialState) => {
 					: null;
 		} else if (
 			fieldName === "password" ||
-			fieldName === "password2" ||
 			fieldName === "newPassword" ||
 			fieldName === "oldPassword"
 		) {
 			fieldErrors =
 				!value.trim() || !/^(?=.{8,})/.test(value)
-					? `${fieldName} should be 8 characters`
+					? `Password should be 8 characters`
 					: null;
 		} else if (fieldName === "password2") {
 			if (!value.trim() || !/^(?=.{8,})/.test(value))
-				fieldErrors = `${fieldName} should be 8 characters`;
+				fieldErrors = `Confirm Password should be 8 characters`;
 			else if (formData.password) {
 				if (value !== formData.password) {
 					fieldErrors = "Password and Confirm Password must be same.";
@@ -61,7 +60,7 @@ const useFormValidation = (initialState) => {
 		} else if (fieldName === "email") {
 			fieldErrors =
 				!value.trim() || !/\S+@\S+\.\S+/.test(value)
-					? "email is invalid"
+					? "Email is invalid"
 					: null;
 		} else if (fieldName === "packagePrice") {
 			fieldErrors = value <= 0 ? "Package Price is required" : null;
@@ -77,13 +76,28 @@ const useFormValidation = (initialState) => {
 					: null;
 		} else if (fieldName === "temperature") {
 			fieldErrors =
-				value < -10 || value > 60 || value === null
-					? "The temperature value must be between -10 to 60"
+				value < 0 || value > 50 || value === null
+					? "The temperature value must be between 0 to 50"
 					: null;
 		} else if (fieldName === "rainfall") {
 			fieldErrors =
 				value < 0 || value > 12000 || value === null
 					? "The rainfall value must be 0 to 12000"
+					: null;
+		} else if (fieldName === "N") {
+			fieldErrors =
+				value < 10 || value > 200 || value === null
+					? "The nitrogen value must be between 10 to 200"
+					: null;
+		} else if (fieldName === "P") {
+			fieldErrors =
+				value < 10 || value > 150 || value === null
+					? "The Phosphorus value must be between 10 to 150"
+					: null;
+		} else if (fieldName === "K") {
+			fieldErrors =
+				value < 50 || value > 250 || value === null
+					? "The Potassium value must be between 50 to 250"
 					: null;
 		} else {
 			fieldErrors = value === null ? `${fieldName} is required` : null;

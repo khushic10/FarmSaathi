@@ -83,11 +83,13 @@ export default function Navbar() {
 				<div ref={menuRef}>
 					{isOpen && (
 						<div className="profile-dropdown">
-							Logout ?
-							<div className="dropdown-content" onClick={toggleDropdown}>
-								<div className="logout_no">No</div>
-								<div className="logout_yes" onClick={handleLogout}>
-									Yes
+							<div>
+								Logout ?
+								<div className="dropdown-content" onClick={toggleDropdown}>
+									<div className="logout_no">No</div>
+									<div className="logout_yes" onClick={handleLogout}>
+										Yes
+									</div>
 								</div>
 							</div>
 						</div>

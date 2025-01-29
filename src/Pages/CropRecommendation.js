@@ -5,8 +5,6 @@ import CustomTextField from "../Components/CustomTextField";
 import { useNavigate } from "react-router-dom";
 import useFormValidation from "../Hooks/useFormValidation";
 import BASE_URL from "../Config/Config";
-import Agriculture from "../Assets/agriculture.jpeg";
-import { useCookies } from "react-cookie";
 
 const CropRecommendation = () => {
 	const nav = useNavigate();
@@ -21,6 +19,9 @@ const CropRecommendation = () => {
 		rainfall: null,
 		ph: null,
 	};
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: "smooth" });
+	}, []);
 
 	const { formData, setErrors, errors, handleChange, validateForm } =
 		useFormValidation(initialFormState);
@@ -45,7 +46,7 @@ const CropRecommendation = () => {
 					nav(`/recommendation/recommended/crop/${data.recommended_crop}`, {
 						state: { formData },
 					});
-					console.log(data);
+					setLoading(false);
 				} else {
 					const error = await response.json();
 					console.log(error);
@@ -84,6 +85,17 @@ const CropRecommendation = () => {
 					>
 						Crop Recommendation
 					</Typography>
+					{error && (
+						<Box
+							sx={{
+								color: "red",
+								fontSize: "1rem",
+								textAlign: "center",
+							}}
+						>
+							{error}
+						</Box>
+					)}
 					<Box
 						sx={{
 							display: "grid",
@@ -201,6 +213,7 @@ const CropRecommendation = () => {
 							"&:hover": { bgcolor: "#425e0f" },
 						}}
 						type="submit"
+						disabled={loading}
 					>
 						Get Recommendations
 					</Button>

@@ -5,21 +5,28 @@ import CustomTextField from "../Components/CustomTextField";
 import { useNavigate } from "react-router-dom";
 import useFormValidation from "../Hooks/useFormValidation";
 import Agriculture from "../Assets/agriculture.jpeg";
+import BACKEND_URL from "../Config/Configure";
 
 const Register = () => {
 	const nav = useNavigate();
 	const [error, setError] = useState("");
 	const [loading, setLoading] = useState(false);
 
-	const [eye, setEye] = useState(false);
+	const [eye, setEye] = useState(true);
+	const [confirmEye, setConfirmEye] = useState(true);
 
 	const handleTogglePassword = () => {
 		setEye(!eye);
 	};
+	const handleConfirmTogglePassword = () => {
+		setConfirmEye(!confirmEye);
+	};
 
 	const initialFormState = {
+		username: "",
 		email: "",
 		password: "",
+		password2: "",
 	};
 
 	const { formData, setErrors, errors, handleChange, validateForm } =
@@ -29,49 +36,37 @@ const Register = () => {
 		e.preventDefault();
 
 		const validationErrors = validateForm(formData);
+		console.log(validationErrors);
 
 		if (Object.keys(validationErrors).length === 0) {
 			setLoading(true);
-			// try {
-			// 	const response = await fetch(`${BASE_URL}/api/v1/auth/employee-login`, {
-			// 		method: "POST",
-			// 		headers: {
-			// 			"Content-Type": "application/json",
-			// 		},
-			// 		body: JSON.stringify(formData),
-			// 	});
-			// 	if (response.ok) {
-			// 		const data = await response.json();
-			// 		console.log(data);
-			// 		setCookie("userToken", `${data.token}`, {
-			// 			path: "/",
-			// 			maxAge: data.tokenExpiryTime,
-			// 		});
-			// 		setCookie("userRole", `${data.role}`, {
-			// 			path: "/",
-			// 			maxAge: data.tokenExpiryTime,
-			// 		});
-			// 		setCookie("userId", `${data.userId}`, {
-			// 			path: "/",
-			// 			maxAge: data.tokenExpiryTime,
-			// 		});
-			// 		if (data.role === "ROLE_ACCOUNTING") {
-			// 			nav("/account/dashboard");
-			// 		} else {
-			// 			nav("/sales/dashboard");
-			// 		}
-			// 		setLoading(false);
-			// 	} else {
-			// 		const error = await response.json();
-			// 		console.log(error);
-			// 		setError(error.message);
-			// 		setLoading(false);
-			// 	}
-			// } catch (error) {
-			// 	console.log("Fetch error:", error.message);
-			// }
-			nav("/");
-			window.location.reload();
+			try {
+				const response = await fetch(`${BACKEND_URL}/api/register/`, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify(formData),
+				});
+				if (response.ok) {
+					const data = await response.json();
+					nav("/login", { state: { message: data.message } });
+					setLoading(false);
+				} else {
+					const error = await response.json();
+					if (error.email) {
+						setErrors((prevErrors) => ({
+							...prevErrors,
+							email: error.email[0],
+						}));
+					} else {
+						setError(error.message); // Set general error message
+					}
+					setLoading(false);
+				}
+			} catch (error) {
+				console.log("Fetch error:", error.message);
+			}
 		} else {
 			setErrors(validationErrors);
 		}
@@ -93,16 +88,17 @@ const Register = () => {
 				src={Agriculture}
 				alt=""
 				style={{
-					height: "88vh",
+					minHeight: "88vh",
 					width: "100%",
 					objectFit: "cover",
 					opacity: "90%",
+					overflow: "auto",
 				}}
 			/>
 			<Paper
 				elevation={3}
 				sx={{
-					margin: "0.5rem",
+					margin: "2rem",
 					padding: "2rem",
 					width: "100%",
 					maxWidth: "450px",
@@ -112,26 +108,68 @@ const Register = () => {
 				<form onSubmit={handleSubmit}>
 					<Typography
 						variant="h4"
-						sx={{ color: "#cead25", textAlign: "center", mb: 2 }}
+						sx={{ color: "#0098b2", textAlign: "center", mb: 2 }}
 					>
 						Sign Up
 					</Typography>
+					{error && (
+						<Box
+							sx={{
+								color: "red",
+								fontSize: "1rem",
+								textAlign: "center",
+							}}
+						>
+							{error}
+						</Box>
+					)}
 					<CustomTextField
-						title="Full Name"
+						title="UserName"
 						placeholder="Enter your full name"
-						borderColor="#cead25"
+						borderColor="#0098b2"
+						name="username"
+						value={formData.username}
+						error={errors.username}
+						helperText={errors.username}
+						onChange={handleChange}
 					/>
 					<CustomTextField
 						title="Email"
 						placeholder="Enter your email"
-						borderColor="#cead25"
+						borderColor="#0098b2"
+						name="email"
+						value={formData.email}
+						error={errors.email}
+						helperText={errors.email}
+						onChange={handleChange}
 						sx={{ mt: 2 }}
 					/>
 					<CustomTextField
 						title="Password"
 						placeholder="Enter your password"
-						type="password"
-						borderColor="#cead25"
+						type={eye ? "password" : "text"}
+						borderColor="#0098b2"
+						name="password"
+						value={formData.password}
+						error={errors.password}
+						helperText={errors.password}
+						onChange={handleChange}
+						eye={eye}
+						onEye={handleTogglePassword}
+						sx={{ mt: 2 }}
+					/>
+					<CustomTextField
+						title="Confirm Password"
+						placeholder="Enter your confirm password"
+						type={confirmEye ? "password" : "text"}
+						borderColor="#0098b2"
+						name="password2"
+						value={formData.password2}
+						error={errors.password2}
+						helperText={errors.password2}
+						onChange={handleChange}
+						eye={confirmEye}
+						onEye={handleConfirmTogglePassword}
 						sx={{ mt: 2 }}
 					/>
 					<Button
@@ -139,10 +177,12 @@ const Register = () => {
 						fullWidth
 						sx={{
 							mt: 3,
-							bgcolor: "#6e7525",
+							bgcolor: "#0098b2",
 							color: "#fff",
 							"&:hover": { bgcolor: "#425e0f" },
 						}}
+						type="submit"
+						disabled={loading}
 					>
 						Sign Up
 					</Button>
@@ -150,7 +190,7 @@ const Register = () => {
 				<Typography
 					variant="body2"
 					sx={{
-						color: "#cead25",
+						color: "#0098b2",
 						textAlign: "center",
 						mt: 2,
 						cursor: "pointer",
