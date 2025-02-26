@@ -34,7 +34,7 @@ const CropRecommendation = () => {
 		if (Object.keys(validationErrors).length === 0) {
 			setLoading(true);
 			try {
-				const response = await fetch(`${BASE_URL}/predict_crop`, {
+				const response = await fetch(`${BASE_URL}/crop_predict`, {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",
@@ -74,7 +74,7 @@ const CropRecommendation = () => {
 				sx={{
 					padding: "2rem",
 					width: "100%",
-					maxWidth: "650px",
+					height: "65vh",
 					position: "absolute",
 				}}
 			>

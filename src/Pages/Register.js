@@ -59,6 +59,11 @@ const Register = () => {
 							...prevErrors,
 							email: error.email[0],
 						}));
+					} else if (error.password) {
+						setErrors((prevErrors) => ({
+							...prevErrors,
+							password: error.password[0],
+						}));
 					} else {
 						setError(error.message); // Set general error message
 					}
