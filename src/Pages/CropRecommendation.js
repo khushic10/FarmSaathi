@@ -189,7 +189,7 @@ const CropRecommendation = () => {
 							type="number"
 						/>
 						<CustomTextField
-							title="Rainfall (mm)"
+							title="Rainfall (cm)"
 							name="rainfall"
 							placeholder="Enter the rainfall value"
 							borderColor="#cead25"

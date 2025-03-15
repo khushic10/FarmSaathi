@@ -41,14 +41,16 @@ const useFormValidation = (initialState) => {
 			fieldName === "newPassword" ||
 			fieldName === "oldPassword"
 		) {
-			fieldErrors =
-				!value.trim() || !/^(?=.{8,})/.test(value)
-					? `Password should be 8 characters`
-					: null;
+			fieldErrors = !value.trim()
+				? "Password is required"
+				: !/^(?=.{8,})/.test(value)
+				? `Password should be 8 characters`
+				: null;
 		} else if (fieldName === "password2") {
-			if (!value.trim() || !/^(?=.{8,})/.test(value))
+			if (!value.trim()) fieldErrors = `Confirm Password is required`;
+			else if (!/^(?=.{8,})/.test(value)) {
 				fieldErrors = `Confirm Password should be 8 characters`;
-			else if (formData.password) {
+			} else if (formData.password) {
 				if (value !== formData.password) {
 					fieldErrors = "Password and Confirm Password must be same.";
 				}
@@ -58,14 +60,15 @@ const useFormValidation = (initialState) => {
 				}
 			} else fieldErrors = null;
 		} else if (fieldName === "email") {
-			fieldErrors =
-				!value.trim() || !/\S+@\S+\.\S+/.test(value)
-					? "Email is invalid"
-					: null;
+			fieldErrors = !value.trim()
+				? "Email is required"
+				: !/\S+@\S+\.\S+/.test(value)
+				? "Email is invalid"
+				: null;
 		} else if (fieldName === "ph") {
 			fieldErrors =
-				value < 5 || value > 8 || value === null
-					? "The pH value must be between 0 and 14"
+				value < 5.5 || value > 7.5 || value === null
+					? "The pH value must be between 5.5 and 7.5"
 					: null;
 		} else if (
 			fieldName === "Humidity" ||
@@ -80,27 +83,27 @@ const useFormValidation = (initialState) => {
 		} else if (fieldName === "temperature" || fieldName === "Temperature") {
 			fieldErrors =
 				value < 0 || value > 45 || value === null
-					? "The temperature value must be between 0 to 50"
+					? "The temperature value must be between 0 to 45"
 					: null;
 		} else if (fieldName === "rainfall" || fieldName === "Rainfall") {
 			fieldErrors =
-				value < 0 || value > 3000 || value === null
-					? "The rainfall value must be 0 to 12000"
+				value < 20 || value > 300 || value === null
+					? "The rainfall value must be 20 to 300"
 					: null;
 		} else if (fieldName === "N" || fieldName === "Nitrogen") {
 			fieldErrors =
-				value < 10 || value > 200 || value === null
-					? "The nitrogen value must be between 10 to 200"
+				value < 0 || value > 200 || value === null
+					? "The nitrogen value must be between 0 to 200"
 					: null;
 		} else if (fieldName === "P" || fieldName === "Phosphorous") {
 			fieldErrors =
-				value < 10 || value > 150 || value === null
-					? "The Phosphorus value must be between 10 to 150"
+				value < 0 || value > 150 || value === null
+					? "The Phosphorus value must be between 0 to 150"
 					: null;
 		} else if (fieldName === "K" || fieldName === "Potassium") {
 			fieldErrors =
-				value < 50 || value > 250 || value === null
-					? "The Potassium value must be between 50 to 250"
+				value < 0 || value > 250 || value === null
+					? "The Potassium value must be between 0 to 250"
 					: null;
 		} else {
 			fieldErrors = value === null ? `${fieldName} is required` : null;

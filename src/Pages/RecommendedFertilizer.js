@@ -46,14 +46,14 @@ export default function RecommendedFertilizer() {
 						<th>Soil Type</th>
 					</tr>
 					<tr>
-						<td>{formData.N}</td>
-						<td>{formData.P}</td>
-						<td>{formData.K}</td>
-						<td>{formData.temperature}</td>
-						<td>{formData.humidity}</td>
-						<td>{formData.moisture}</td>
-						<td>{formData.crop_type}</td>
-						<td>{formData.soil_type}</td>
+						<td>{formData.Nitrogen}</td>
+						<td>{formData.Phosphorous}</td>
+						<td>{formData.Potassium}</td>
+						<td>{formData.Temperature}</td>
+						<td>{formData.Humidity}</td>
+						<td>{formData.Moisture}</td>
+						<td>{formData.Crop_Type}</td>
+						<td>{formData.Soil_Type}</td>
 					</tr>
 				</table>
 			)}

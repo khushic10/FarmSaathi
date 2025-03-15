@@ -130,13 +130,14 @@ ul li + li {
 .styled-table tr th {
 	background-color: $tertiary-color;
 	color: white;
-	text-align: left;
+	text-align: center;
 	font-weight: bold;
 }
 
 .styled-table th,
 .styled-table td {
 	padding: 12px 15px;
+	text-align: center;
 }
 
 .styled-table tr td {
